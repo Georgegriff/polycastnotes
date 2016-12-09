@@ -1,0 +1,28 @@
+<link rel="import" href="bower_components/polymerfire/firebase-app.html">
+<link rel="import" href="bower_components/polymerfire/firebase-auth.html">
+<link rel="import" href="my-login.html">
+
+<link rel="import" href="my-notes.html">
+
+
+<dom-module id="my-app">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+          <firebase-app auth-domain="fir-project-35d65.firebaseapp.com"
+            database-url="https://fir-project-35d65.firebaseio.com/"
+         api-key="AIzaSyCj1vZQZrUILh69Jpbph9ozr233n3h_DYI">
+        </firebase-app>
+
+        <my-login></my-login>
+        <my-notes></my-notes>
+    </template>
+    <script>
+        Polymer({
+            is: 'my-app'
+        });
+    </script>
+</dom-module>
